@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="eng">
+    
+    <head>
+        
+    <meta charset="utf-8">
+      <style>
+         *{margin: 2px;
+           }
+           
+    .all{margin-top:-9vh}
+        
+       .eddy{font-size:7vw;
+             margin-left:5px;
+             font-weight:bold;
+             font-family: verdana;
+            }
+       
+       .marg{margin:2vh 2vw;
+            margin-top:5vh}
+       
+ /*   @media only screen and (min-width:768px)
+        {.body{width:100%;
+            display:flex;
+            flex-flow: row wrap;
+            justify-content:flex-start;
+            align-items:center}
+            
+        .eddy{font-size:3vh}
+        
+        .img{height:10vh;
+           width:50vw;
+          object-fit:cover;
+          margin-left:2vw;
+          border: 2px green solid;
+         
+       .menu{display:flex;
+       flex-direction:column;
+       justify-content:center;
+       align-items:center;
+       gap:0.2vh;
+       background-color:#eaeaff;
+       width:10vw;
+       height:7vh;
+       padding:0 6vw;
+       border-radius:4px;
+       position:relative;
+       left:900vw;}
+       }}*/
+           
+      .block{background-color:transparent;                                                       border:2px blue solid;
+          }
+      
+      .imgp{display:flex;
+          justify-content:flex-end;}
+          
+      .img{height:33vh;
+           width:50vw;
+           border-radius:40%;
+           object-fit:cover;
+           margin-left:2vw;
+           margin-top:2vh;}
+
+    .web{font-family: Helvetica;
+        margin-top:2vh;
+        font-size:2.5vh;
+        font-weight:350}   
+        
+   
+    
+    .exp{margin-left:2vw;
+        font-weight:700;
+        font-size:3vh;}
+        
+    .ex{background-color:#d5f4ff;
+        border-radius:7px;
+        }
+        
+    .exp, .ex, .sfr{
+       padding:2vh 0; 
+    }
+    
+    .sfr, .etxt, .front{margin-left:4vw}
+    
+    .front{font-weight:500;}
+    
+    .text, .well{font-weight:350;
+         margin:3vh 0}
+    
+    .well{margin-top:1vh;}
+    
+    .my{font-weight:400;
+       margin-left:3vw;
+       margin-bottom:1vh}
+       
+    .abt{margin-left:4vw}
+         
+   .containit{ }
+   
+   .line{width:7vw;
+         height:1vh;
+         background-color:black;
+         border-radius:4px;}   
+          
+   .sfr{color:purple;}
+   
+   .menu{display:none;
+       flex-direction:column;
+       justify-content:center;
+       align-items:center;
+       gap:0.2vh;
+       background-color:#eaeaff;
+       width:10vw;
+       height:7vh;
+       padding:0 6vw;
+       border-radius:4px;
+       position:relative;
+       left:20%;}  
+       
+   .hire, .cv{
+       display:inline-block;
+       margin-top: 50px;
+       border-radius:20px;
+       background-color:purple;
+       color:white;
+       padding:7px;
+       text-decoration:none;
+       font-weight:bold;
+       font-family: sans-serif;
+       
+   }
+  .e{color:#716aff;}     
+     
+      </style>  
+    </head>
+    
+    
+<body><!---booooodyyy------->
+   <div class="imgp"><img src="chk.jpg" alt="" class="img"></div>
+
+    <div class="all">
+    <div class ="body">
+    
+  <div class="web">web<span class="dev">developer</span></div>   
+  
+   <div class="containit">
+   <div class="eddy">
+     Hi, I&apos;m <span class="e">E</span>DDY.
+    </div>
+    
+    <div class="marg">
+
+     
+
+   
+   <div class="menu">
+     <div class="line"></div>
+     <div class="line"></div>
+     <div class="line"></div>
+   </div> 
+   
+   </div><!--containit-->
+  
+    </div><!-- .body-->
+    
+    <div class="culmination"></div>
+    <div class="words">
+        
+    </div>
+    
+    </div><!--culmunation-->
+ 
+ <div class="approach">
+  <div class="abt">My Approach</div>
+    <div class="well">
+    
+I believe that a well-designed website is essential for effective communication and user engagement. My approach focuses on clean, semantic markup and responsive design practices that enhance the user experience. I aim to write efficient, maintainable code and stay up-to-date with the latest web development trends and technologies.</div>
+
+</div>
+    
+  <div class="text">
+    <div class="my">An Adventure</div>
+      You might see me exploring uncharted territories, solving complex puzzles, and bringing ideas to life. But nobody pays me for those adventures. Thats why I am dedicating myself to mastering web development. I wont rest until my creations leave a lasting impression on the world.
+  </div>
+  
+<div class ="options">
+  
+  <div class="ex">
+ <div class="exp">Experience</div>
+ <div class="front">front-End Web Developer</div>
+ <div class="sfr">2019 - Present | Pro Level Programmer</div>
+ <div class="etxt">I am master of HTML, CSS and JavaScript. I know everything needed to make a website functional, efficient and responsive. I will give you %100 web solution. </div>
+ 
+
+  <a href= "http://www.linkedin.com/in/edwin-chigozie-a78a14214" class="hire">Hire me</a>
+  
+  <a href="" class="cv">Download my CV</a>
+    </div><!-- all-->
+   </div><!--- Marg-->
+   
+   <script>
+const dev=document.querySelector(".dev");
+var t=2000;
+
+setInterval(()=>{
+dev.innerText="Designer";
+t+=1000;
+if(t>4000){
+    dev.innerText="Developer";
+    t=2000;
+}
+}, t)
+   </script>
+    </body>
+</html>
