@@ -56,14 +56,13 @@
                 <div class="hero">
                     <a href="https://github.com/maxyl19" class="btn">GitHub</a>
                     <a href="https://github.com/maxyl19" class="btn btn-blue">View Profile</a>
-                    <!-- ✅ CV LINK FIXED - YOUR LIVE PAGE -->
-                    <a href="https://maxyl19.github.io/Cv/" class="btn" target="_blank">View CV</a>
+                    <!-- ✅ YOUR CV.DOCX - DIRECT DOWNLOAD -->
+                    <a href="CV.docx" class="btn" download>Download CV</a>
                     <a href="mailto:edwinchigozie2003@gmail.com" class="btn btn-green">Email Me</a>
                 </div>
             </div>
         </header>
 
-        <!-- REST OF PORTFOLIO REMAINS IDENTICAL - ALL 3 PROJECTS WORKING -->
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
@@ -140,6 +139,77 @@
                     <div class="project-card" data-category="js">
                         <div class="project-image">🧮 Calculator</div>
                         <div class="project-content">
+                            <h3>Responsive Calculator</h3>
+                            <p>Fully functional calculator app with modern UI. Handles all basic operations, responsive design for mobile/tablet/desktop.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">CSS Grid</span>
+                                <span class="tech-tag">Event Handling</span>
+                                <span class="tech-tag">Responsive</span>
+                            </div>
+                            <div class="metrics">
+                                <strong>Status:</strong> Cross-Device | Real Math Logic | Production Ready
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <a href="https://github.com/maxyl19/Calculator" class="btn" style="font-size: 0.9em; padding: 8px 16px;">Source Code</a>
+                                <a href="https://maxyl19.github.io/Calculator/" class="btn btn-green" style="font-size: 0.9em; padding: 8px 16px;">Try Live</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="background: #f8f9ff;">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="your@email.com" required>
+                    <textarea rows="5" placeholder="Tell me about your project, job opportunity, or collaboration..." required></textarea>
+                    <button type="submit" class="btn" style="width: 100%; font-size: 1.1em;">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Or Contact Directly:</h3>
+                    <p><strong>Email:</strong> <a href="mailto:edwinchigozie2003@gmail.com">edwinchigozie2003@gmail.com</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/maxyl19">github.com/maxyl19</a></p>
+                    <p><strong>CV:</strong> <a href="CV.docx" download>CV.docx (Latest)</a></p>
+                    <p><strong>Location:</strong> Abuja, FCT, Nigeria | <strong>Open to remote work</strong></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/babel">
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filter = btn.dataset.filter;
+                    projectCards.forEach(card => {
+                        card.style.display = 'block';
+                        if (filter !== 'all' && !card.dataset.category.includes(filter)) {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            document.querySelector('.contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thanks! Message sent to edwinchigozie2003@gmail.com (Demo)');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
+roject-content">
                             <h3>Responsive Calculator</h3>
                             <p>Fully functional calculator app with modern UI. Handles all basic operations, responsive design for mobile/tablet/desktop.</p>
                             <div class="project-tech">
