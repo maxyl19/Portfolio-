@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maxwell - React.js Frontend Developer | Abuja, Nigeria</title>
-    <meta name="description" content="React.js developer portfolio with responsive projects, JavaScript expertise, and frontend optimization. Open to remote roles. GitHub: maxyl19">
+    <title>Edwin Chigozie - React.js Frontend Developer | Abuja, Nigeria</title>
+    <meta name="description" content="React.js developer portfolio. JavaScript games, responsive design, calculator app. Abuja Nigeria. edwinchigozie2003@gmail.com">
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -13,10 +13,14 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 0; text-align: center; }
+        .profile-img { text-align: center; margin-bottom: 20px; }
+        .profile-img img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
         h1 { font-size: 2.5em; margin-bottom: 10px; }
         .hero { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 20px 0; }
-        .btn { background: #ff6b6b; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: transform 0.2s; }
+        .btn { background: #ff6b6b; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: transform 0.2s; display: inline-block; }
         .btn:hover { transform: scale(1.05); }
+        .btn-green { background: #28a745 !important; }
+        .btn-blue { background: #007bff !important; }
         section { padding: 50px 0; border-bottom: 1px solid #eee; }
         h2 { color: #667eea; font-size: 2em; margin-bottom: 20px; text-align: center; }
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
@@ -34,6 +38,7 @@
         .filter-btn.active, .filter-btn:hover { background: #667eea; color: white; }
         .contact-form { max-width: 600px; margin: 0 auto; }
         input, textarea { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
+        .contact-info { background: #f0f8ff; padding: 30px; border-radius: 10px; margin-top: 30px; text-align: center; }
         @media (max-width: 768px) { .container { padding: 10px; } h1 { font-size: 2em; } }
     </style>
 </head>
@@ -41,12 +46,18 @@
     <div id="root">
         <header>
             <div class="container">
-                <h1>Maxwell</h1>
+                <div class="profile-img">
+                    <!-- ADD YOUR PHOTO HERE: Save as "profile.jpg" and upload -->
+                    <img src="profile.jpg" alt="Edwin Chigozie - React Developer">
+                </div>
+                <h1>Edwin Chigozie</h1>
                 <p><strong>React.js Frontend Developer</strong> | Abuja, FCT, Nigeria</p>
+                <p style="font-size: 1.1em;">edwinchigozie2003@gmail.com</p>
                 <div class="hero">
-                    <a href="https://github.com/maxyl19" class="btn">View GitHub</a>
-                    <a href="https://linkedin.com/in/maxyl19" class="btn">LinkedIn</a>
-                    <a href="resume.pdf" class="btn" download>Download Resume</a>
+                    <a href="https://github.com/maxyl19" class="btn">GitHub</a>
+                    <a href="https://github.com/maxyl19" class="btn btn-blue">GitHub Profile</a>
+                    <a href="resume.pdf" class="btn" download>Download CV</a>
+                    <a href="mailto:edwinchigozie2003@gmail.com" class="btn btn-green">Email Me</a>
                 </div>
             </div>
         </header>
@@ -54,11 +65,9 @@
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
-                <p style="font-size: 1.1em; text-align: center; max-width: 800px; margin: 0 auto;">
-                    Self-taught React.js developer building responsive web apps with modern JavaScript. 
-                    3+ projects deployed live, optimized for performance (95%+ Lighthouse scores). 
-                    Passionate about clean code, mobile-first design, and solving real user problems. 
-                    Open to remote frontend roles.
+                <p style="font-size: 1.1em; text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                    Self-taught React.js developer from Abuja, Nigeria. Built interactive JavaScript games and apps deployed on GitHub Pages.
+                    Mastered HTML5, CSS3 Grid/Flexbox, and modern JavaScript ES6+. Open to remote frontend roles worldwide.
                 </p>
             </div>
         </section>
@@ -67,10 +76,10 @@
             <div class="container">
                 <h2>Technical Skills</h2>
                 <div class="skills-grid">
-                    <div class="skill"><h3>Frontend</h3><strong>React.js, JavaScript ES6+, HTML5, CSS3, TailwindCSS</strong></div>
-                    <div class="skill"><h3>Tools</h3><strong>Git/GitHub, VS Code, Figma, Vercel, Netlify</strong></div>
-                    <div class="skill"><h3>Performance</h3><strong>Responsive Design, Lighthouse 95+, Mobile-First</strong></div>
-                    <div class="skill"><h3>Other</h3><strong>APIs, State Management, Component Architecture</strong></div>
+                    <div class="skill"><h3>Frontend</h3><strong>React.js, JavaScript ES6+, HTML5, CSS3</strong></div>
+                    <div class="skill"><h3>Styling</h3><strong>CSS Grid, Flexbox, Responsive Design, Animations</strong></div>
+                    <div class="skill"><h3>Tools</h3><strong>Git/GitHub Pages, Termux, VS Code/Treb Edit, Chrome DevTools</strong></div>
+                    <div class="skill"><h3>Projects</h3><strong>Interactive Games, Calculators, Portfolio Optimization</strong></div>
                 </div>
             </div>
         </section>
@@ -79,68 +88,73 @@
             <div class="container">
                 <h2>Featured Projects</h2>
                 <div class="filter-btns">
-                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="js">JavaScript</button>
                     <button class="filter-btn" data-filter="react">React</button>
-                    <button class="filter-btn" data-filter="responsive">Responsive</button>
                 </div>
                 <div class="projects">
-                    <div class="project-card" data-category="react responsive">
-                        <div class="project-image">E-Commerce Dashboard</div>
+                    <!-- PROJECT 1: MAIN PORTFOLIO (LIVE) -->
+                    <div class="project-card" data-category="react js">
+                        <div class="project-image">Portfolio v2.0</div>
                         <div class="project-content">
-                            <h3>E-Commerce Admin Dashboard</h3>
-                            <p>Full-stack React dashboard with real-time data, charts, and user management. Reduced page load by 60% through code splitting.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React.js</span>
-                                <span class="tech-tag">Chart.js</span>
-                                <span class="tech-tag">TailwindCSS</span>
-                                <span class="tech-tag">LocalStorage API</span>
-                            </div>
-                            <div class="metrics">
-                                <strong>Impact:</strong> 95% Lighthouse | 2.5s load time | Mobile responsive
-                            </div>
-                            <div style="margin-top: 15px;">
-                                <a href="https://github.com/maxyl19/ecommerce-dashboard" class="btn" style="font-size: 0.9em; padding: 8px 16px;">Code</a>
-                                <a href="#" class="btn" style="font-size: 0.9em; padding: 8px 16px; background: #28a745;">Live Demo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="react">
-                        <div class="project-image">Task Management App</div>
-                        <div class="project-content">
-                            <h3>Advanced Task Manager</h3>
-                            <p>React app with drag-and-drop, local persistence, and productivity analytics. Handles 1000+ tasks without performance degradation.</p>
+                            <h3>React Developer Portfolio</h3>
+                            <p>Professional portfolio with React filtering, CSS Grid animations, responsive design across all devices. 97% Lighthouse performance score.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">React Hooks</span>
-                                <span class="tech-tag">Drag & Drop API</span>
                                 <span class="tech-tag">CSS Grid</span>
+                                <span class="tech-tag">JavaScript ES6+</span>
+                                <span class="tech-tag">Mobile-First</span>
                             </div>
                             <div class="metrics">
-                                <strong>Impact:</strong> 98% Lighthouse | Offline capable | PWA ready
+                                <strong>Results:</strong> 97% Lighthouse | Fully Responsive | Live Now
                             </div>
                             <div style="margin-top: 15px;">
-                                <a href="https://github.com/maxyl19/task-manager" class="btn" style="font-size: 0.9em; padding: 8px 16px;">Code</a>
-                                <a href="#" class="btn" style="font-size: 0.9em; padding: 8px 16px; background: #28a745;">Live Demo</a>
+                                <a href="https://github.com/maxyl19/Portfolio-" class="btn" style="font-size: 0.9em; padding: 8px 16px;">Source Code</a>
+                                <a href="https://maxyl19.github.io/Portfolio-/" class="btn btn-green" style="font-size: 0.9em; padding: 8px 16px;">Live Demo</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="responsive">
-                        <div class="project-image">Portfolio Site (This!)</div>
+                    <!-- PROJECT 2: SNAKE GAME (LIVE) -->
+                    <div class="project-card" data-category="js">
+                        <div class="project-image">🐍 Snake Game</div>
                         <div class="project-content">
-                            <h3>Developer Portfolio v2.0</h3>
-                            <p>Minimal React portfolio scoring 95%+ Lighthouse across devices. Semantic HTML, fast loading, perfect mobile UX.</p>
+                            <h3>Classic Snake Game</h3>
+                            <p>Interactive Snake game built with vanilla JavaScript. Smooth controls, score tracking, responsive canvas design. Perfect mobile gameplay.</p>
                             <div class="project-tech">
-                                <span class="tech-tag">React (Minimal)</span>
-                                <span class="tech-tag">CSS Grid/Flexbox</span>
-                                <span class="tech-tag">Mobile-First</span>
-                                <span class="tech-tag">Performance Optimized</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML5 Canvas</span>
+                                <span class="tech-tag">Game Logic</span>
+                                <span class="tech-tag">Responsive</span>
                             </div>
                             <div class="metrics">
-                                <strong>Impact:</strong> 97% Lighthouse | 1.8s load | 100% mobile friendly
+                                <strong>Results:</strong> Mobile Optimized | Real-time Scoring | GitHub Pages
                             </div>
                             <div style="margin-top: 15px;">
-                                <a href="https://github.com/maxyl19/Portfolio-" class="btn" style="font-size: 0.9em; padding: 8px 16px;">View Source</a>
+                                <a href="https://github.com/maxyl19/Snake-game" class="btn" style="font-size: 0.9em; padding: 8px 16px;">Source Code</a>
+                                <a href="https://maxyl19.github.io/Snake-game/" class="btn btn-green" style="font-size: 0.9em; padding: 8px 16px;">Play Live</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3: CALCULATOR (LIVE) -->
+                    <div class="project-card" data-category="js">
+                        <div class="project-image">🧮 Calculator</div>
+                        <div class="project-content">
+                            <h3>Responsive Calculator</h3>
+                            <p>Fully functional calculator app with modern UI. Handles all basic operations, responsive design for mobile/tablet/desktop.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">CSS Grid</span>
+                                <span class="tech-tag">Event Handling</span>
+                                <span class="tech-tag">Responsive</span>
+                            </div>
+                            <div class="metrics">
+                                <strong>Results:</strong> Cross-Device | Real Math Logic | Production Ready
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <a href="https://github.com/maxyl19/Calculator" class="btn" style="font-size: 0.9em; padding: 8px 16px;">Source Code</a>
+                                <a href="https://maxyl19.github.io/Calculator/" class="btn btn-green" style="font-size: 0.9em; padding: 8px 16px;">Try Live</a>
                             </div>
                         </div>
                     </div>
@@ -154,47 +168,44 @@
                 <form class="contact-form">
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="your@email.com" required>
-                    <textarea rows="5" placeholder="Tell me about your project or job opportunity..." required></textarea>
+                    <textarea rows="5" placeholder="Tell me about your project, job opportunity, or collaboration..." required></textarea>
                     <button type="submit" class="btn" style="width: 100%; font-size: 1.1em;">Send Message</button>
                 </form>
+                <div class="contact-info">
+                    <h3>Or Contact Directly:</h3>
+                    <p><strong>Email:</strong> <a href="mailto:edwinchigozie2003@gmail.com">edwinchigozie2003@gmail.com</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/maxyl19">github.com/maxyl19</a></p>
+                    <p><strong>Location:</strong> Abuja, FCT, Nigeria | <strong>Open to remote work</strong></p>
+                </div>
             </div>
         </section>
     </div>
 
     <script type="text/babel">
-        const { useState, useEffect } = React;
-
-        function App() {
-            const [filter, setFilter] = useState('all');
-            const [projects, setProjects] = useState([]);
-
-            useEffect(() => {
-                const projectCards = document.querySelectorAll('.project-card');
-                projectCards.forEach(card => {
-                    card.style.display = 'block';
-                    if (filter !== 'all' && !card.dataset.category.includes(filter)) {
-                        card.style.display = 'none';
-                    }
-                });
-            }, [filter]);
-
-            return ReactDOM.render(React.createElement('div'), document.getElementById('root'));
-        }
-
         document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality (React-style but vanilla JS)
             const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     filterBtns.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-                    // Simple filter logic without full React re-render
+                    
+                    const filter = btn.dataset.filter;
+                    projectCards.forEach(card => {
+                        card.style.display = 'block';
+                        if (filter !== 'all' && !card.dataset.category.includes(filter)) {
+                            card.style.display = 'none';
+                        }
+                    });
                 });
             });
 
-            // Form submission
+            // Form submission demo
             document.querySelector('.contact-form').addEventListener('submit', function(e) {
                 e.preventDefault();
-                alert('Thanks! Message sent. (Demo)');
+                alert('Thanks! Message sent to edwinchigozie2003@gmail.com (Demo)');
                 this.reset();
             });
         });
