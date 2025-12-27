@@ -1,220 +1,757 @@
 <!DOCTYPE html>
-<html lang="eng">
-    
-    <head>
-        
-    <meta charset="utf-8">
-      <style>
-         *{margin: 2px;
-           }
-           
-    .all{margin-top:-9vh}
-        
-       .eddy{font-size:7vw;
-             margin-left:5px;
-             font-weight:bold;
-             font-family: verdana;
-            }
-       
-       .marg{margin:2vh 2vw;
-            margin-top:5vh}
-       
- /*   @media only screen and (min-width:768px)
-        {.body{width:100%;
-            display:flex;
-            flex-flow: row wrap;
-            justify-content:flex-start;
-            align-items:center}
-            
-        .eddy{font-size:3vh}
-        
-        .img{height:10vh;
-           width:50vw;
-          object-fit:cover;
-          margin-left:2vw;
-          border: 2px green solid;
-         
-       .menu{display:flex;
-       flex-direction:column;
-       justify-content:center;
-       align-items:center;
-       gap:0.2vh;
-       background-color:#eaeaff;
-       width:10vw;
-       height:7vh;
-       padding:0 6vw;
-       border-radius:4px;
-       position:relative;
-       left:900vw;}
-       }}*/
-           
-      .block{background-color:transparent;                                                       border:2px blue solid;
-          }
-      
-      .imgp{display:flex;
-          justify-content:flex-end;}
-          
-      .img{height:33vh;
-           width:50vw;
-           border-radius:40%;
-           object-fit:cover;
-           margin-left:2vw;
-           margin-top:2vh;}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edwin Chigozie | Front-End Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Portfolio of Edwin Chigozie, a front-end developer building responsive, user-focused web applications with JavaScript, Vue.js, and React."
+  />
 
-    .web{font-family: Helvetica;
-        margin-top:2vh;
-        font-size:2.5vh;
-        font-weight:350}   
-        
-   
-    
-    .exp{margin-left:2vw;
-        font-weight:700;
-        font-size:3vh;}
-        
-    .ex{background-color:#d5f4ff;
-        border-radius:7px;
-        }
-        
-    .exp, .ex, .sfr{
-       padding:2vh 0; 
+  <!-- ====== BASIC STYLES ====== -->
+  <style>
+    :root {
+      --bg-main: #f5f7fb;
+      --bg-card: #ffffff;
+      --primary: #7156ff;
+      --primary-soft: #d5f4ff;
+      --accent: #ff4b4b;
+      --text-main: #111827;
+      --text-soft: #4b5563;
+      --border-soft: #e5e7eb;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --radius-full: 999px;
     }
-    
-    .sfr, .etxt, .front{margin-left:4vw}
-    
-    .front{font-weight:500;}
-    
-    .text, .well{font-weight:350;
-         margin:3vh 0}
-    
-    .well{margin-top:1vh;}
-    
-    .my{font-weight:400;
-       margin-left:3vw;
-       margin-bottom:1vh}
-       
-    .abt{margin-left:4vw}
-         
-   .containit{ }
-   
-   .line{width:7vw;
-         height:1vh;
-         background-color:black;
-         border-radius:4px;}   
-          
-   .sfr{color:purple;}
-   
-   .menu{display:none;
-       flex-direction:column;
-       justify-content:center;
-       align-items:center;
-       gap:0.2vh;
-       background-color:#eaeaff;
-       width:10vw;
-       height:7vh;
-       padding:0 6vw;
-       border-radius:4px;
-       position:relative;
-       left:20%;}  
-       
-   .hire, .cv{
-       display:inline-block;
-       font-size:2vh;
-       text-align:center;
-       line-height:3vh;
-       height:3vh;
-       weight:7vw;
-       margin-top: 50px;
-       border-radius:20px;
-       background-color:purple;
-       color:white;
-       padding:7px;
-       text-decoration:none;
-       font-weight:bold;
-       font-family: sans-serif;
-       
-   }
-  .e{color:#716aff;}     
-     
-      </style>  
-    </head>
-    
-    
-<body><!---booooodyyy------->
-   <div class="imgp"><img src="chk.jpg" alt="" class="img"></div>
 
-    <div class="all">
-    <div class ="body">
-    
-  <div class="web">web<span class="dev"> developer</span></div>   
-  
-   <div class="containit">
-   <div class="eddy">
-     Hi, I&apos;m <span class="e">E</span>DDY.
-    </div>
-    
-    <div class="marg">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-     
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
 
-   
-   <div class="menu">
-     <div class="line"></div>
-     <div class="line"></div>
-     <div class="line"></div>
-   </div> 
-   
-   </div><!--containit-->
-  
-    </div><!-- .body-->
-    
-    <div class="culmination"></div>
-    <div class="words">
-        
-    </div>
-    
-    </div><!--culmunation-->
- 
- <div class="approach">
-  <div class="abt">My Approach</div>
-    <div class="well">
-    
-I believe that a well-designed website is essential for effective communication and user engagement. My approach focuses on clean, semantic markup and responsive design practices that enhance the user experience. I aim to write efficient, maintainable code and stay up-to-date with the latest web development trends and technologies.</div>
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-</div>
-    
-  <div class="text">
-    <div class="my">An Adventure</div>
-      You might see me exploring uncharted territories, solving complex puzzles, and bringing ideas to life. But nobody pays me for those adventures. Thats why I am dedicating myself to mastering web development. I wont rest until my creations leave a lasting impression on the world.
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* ====== HEADER & NAV ====== */
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--primary-soft);
+      background: #fff;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-role {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      color: var(--text-soft);
+      border: 1px solid transparent;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      border-color: var(--primary-soft);
+      background: #fff;
+      text-decoration: none;
+    }
+
+    .btn-primary,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        background 0.12s ease, border-color 0.12s ease;
+      box-shadow: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(88, 80, 236, 0.28);
+    }
+
+    .btn-outline {
+      border-color: var(--border-soft);
+      background: #fff;
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary-soft);
+      background: #f9fafb;
+    }
+
+    /* ====== HERO ====== */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+      background: linear-gradient(135deg, #f9fafb, #eef2ff);
+      padding: 24px 24px 24px 24px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-text h1 span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+      max-width: 480px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      border-radius: var(--radius-full);
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      background: rgba(113, 106, 255, 0.08);
+      color: var(--primary);
+      border: 1px solid rgba(113, 106, 255, 0.25);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .hero-photo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo-inner {
+      max-width: 260px;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 3px solid #fff;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.22);
+      background: #fff;
+    }
+
+    .hero-photo-inner img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* ====== SECTIONS ====== */
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-top: 28px;
+    }
+
+    section {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 20px 18px 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #e5e7eb;
+    }
+
+    section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    /* ====== ABOUT ====== */
+    .about-text {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+    }
+
+    .about-text p + p {
+      margin-top: 8px;
+    }
+
+    .about-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
+
+    .about-item {
+      padding: 8px 10px;
+      border-radius: var(--radius-md);
+      background: #f9fafb;
+      border: 1px solid var(--border-soft);
+    }
+
+    .about-label {
+      font-size: 0.75rem;
+      color: var(--text-soft);
+    }
+
+    .about-value {
+      font-weight: 600;
+    }
+
+    /* ====== SKILLS ====== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      font-size: 0.88rem;
+    }
+
+    .skill-card {
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      background: #f9fafb;
+      border: 1px solid var(--border-soft);
+    }
+
+    .skill-card h3 {
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      background: #eef2ff;
+      color: #4338ca;
+    }
+
+    /* ====== EXPERIENCE & PROJECTS ====== */
+    .item {
+      padding: 10px 0;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .item:first-of-type {
+      border-top: none;
+    }
+
+    .item-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 6px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .item-title {
+      font-weight: 600;
+    }
+
+    .item-meta {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .item-tech {
+      font-size: 0.8rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .item ul {
+      margin-left: 18px;
+      font-size: 0.88rem;
+      color: var(--text-soft);
+    }
+
+    .item ul li + li {
+      margin-top: 4px;
+    }
+
+    .links-inline {
+      margin-top: 4px;
+      font-size: 0.82rem;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      margin-top: 20px;
+      padding: 12px 4px 4px;
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      text-align: center;
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 18px 16px;
+      }
+
+      .hero-photo-inner {
+        max-width: 220px;
+      }
+
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .page {
+        padding: 16px 14px 32px;
+      }
+
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- ====== HEADER ====== -->
+    <header>
+      <div class="top-bar">
+        <div class="brand">
+          <div class="brand-avatar">
+            <!-- Use your existing photo -->
+            <img src="chk.jpg" alt="Portrait of Edwin Chigozie" />
+          </div>
+          <div>
+            <div class="brand-name">Edwin Chigozie</div>
+            <div class="brand-role">Front-End Developer • Abuja, Nigeria</div>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <section class="hero" aria-label="Intro">
+        <div class="hero-text">
+          <h1>
+            Building responsive, <span>user‑focused</span> web interfaces.
+          </h1>
+          <p class="hero-subtitle">
+            Front-End Developer crafting interactive web experiences with JavaScript, Vue.js, React,
+            HTML5, and CSS3. Focused on performance, clean code, and solving real business problems.
+          </p>
+
+          <div class="badge-row">
+            <span class="badge">JavaScript • Vue.js • React</span>
+            <span class="badge">Responsive Design</span>
+            <span class="badge">Performance Optimization</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Hire me</a>
+            <a
+              href="CV.pdf"
+              class="btn-outline"
+              download
+            >
+              Download CV
+            </a>
+          </div>
+
+          <p class="hero-meta">
+            Currently open to junior front-end roles, internships, and freelance projects.
+          </p>
+        </div>
+
+        <div class="hero-photo" aria-hidden="true">
+          <div class="hero-photo-inner">
+            <img src="chk.jpg" alt="Portrait of Edwin Chigozie" />
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- ====== MAIN ====== -->
+    <main>
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>About</h2>
+        <p class="section-subtitle">
+          A concise snapshot of who you are as a developer.
+        </p>
+        <div class="two-col">
+          <div class="about-text">
+            <p>
+              Front-End Developer with experience building responsive websites and web applications for
+              Nigerian businesses using JavaScript, Vue.js, WordPress, HTML5, and CSS3.
+            </p>
+            <p>
+              Enjoys turning ideas into interfaces that feel fast, intuitive, and reliable across devices.
+              Writes maintainable code, communicates clearly with teams, and keeps learning modern tooling.
+            </p>
+          </div>
+
+          <div>
+            <div class="about-meta">
+              <div class="about-item">
+                <div class="about-label">Location</div>
+                <div class="about-value">Abuja, Nigeria</div>
+              </div>
+              <div class="about-item">
+                <div class="about-label">Experience</div>
+                <div class="about-value">Front-End • 1+ year</div>
+              </div>
+              <div class="about-item">
+                <div class="about-label">Education</div>
+                <div class="about-value">HND, Computer Engineering</div>
+              </div>
+              <div class="about-item">
+                <div class="about-label">Focus</div>
+                <div class="about-value">Web UIs & mini‑games</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <p class="section-subtitle">
+          Core technologies and concepts used in recent work.
+        </p>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Languages</h3>
+            <div>JavaScript (ES6+), HTML5, CSS3</div>
+            <div class="skill-tags">
+              <span class="tag">ES6</span>
+              <span class="tag">Semantic HTML</span>
+              <span class="tag">Modern CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Frameworks & UI</h3>
+            <div>Vue.js, React, Tailwind CSS, WordPress</div>
+            <div class="skill-tags">
+              <span class="tag">SPA</span>
+              <span class="tag">Components</span>
+              <span class="tag">Responsive Layouts</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <div>Git, GitHub, VS Code, Figma, Jest</div>
+            <div class="skill-tags">
+              <span class="tag">Version Control</span>
+              <span class="tag">Testing</span>
+              <span class="tag">Design Handoff</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Concepts</h3>
+            <div>
+              Responsive Design, Cross‑Browser Compatibility, Performance Optimization, Basic
+              Accessibility
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Media Queries</span>
+              <span class="tag">Lazy Loading</span>
+              <span class="tag">A11y</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <h2>Experience</h2>
+        <p class="section-subtitle">
+          Professional work focused on front-end development.
+        </p>
+
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Front-End Developer · Darlez Nigeria Ltd.</div>
+            <div class="item-meta">Abuja · Jan 2025 – Jun 2025</div>
+          </div>
+          <div class="item-meta">Industry: Corporate websites & marketing pages</div>
+          <p class="item-tech">Tech: Vue.js, WordPress, HTML5, CSS3, JavaScript</p>
+          <ul>
+            <li>
+              Developed marketing and corporate websites using Vue.js and WordPress, improving
+              navigation clarity and on‑page engagement for local clients.
+            </li>
+            <li>
+              Optimized page speed by about 30% through image lazy‑loading, CSS refactoring, and
+              reduced blocking resources on key landing pages.
+            </li>
+            <li>
+              Implemented responsive layouts for 5 client projects, reducing client‑reported visual bugs
+              by roughly 40% across mobile and desktop devices.
+            </li>
+            <li>
+              Collaborated with designers and PMs to translate wireframes into accessible, maintainable
+              front-end components.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <p class="section-subtitle">
+          Selected personal projects that show problem‑solving and front‑end skills.
+        </p>
+
+        <!-- Snake Game -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Snake Game</div>
+            <div class="item-meta">JavaScript · HTML5 Canvas</div>
+          </div>
+          <p class="item-tech">
+            Tech: Vanilla JavaScript, Canvas API, HTML5, CSS3, Jest
+          </p>
+          <ul>
+            <li>
+              Built a browser‑based snake game with smooth keyboard controls, collision detection, and
+              dynamic speed increases per level.
+            </li>
+            <li>
+              Achieved 100% unit‑test coverage with Jest to ensure consistent snake movement and scoring
+              logic when refactoring.
+            </li>
+          </ul>
+          <div class="links-inline">
+            Live demo: <a href="https://maxyl19.github.io/Portfolio" target="_blank" rel="noreferrer">View on GitHub Pages</a> ·
+            Code: <a href="https://github.com/edwinchigoziewebsiter" target="_blank" rel="noreferrer">GitHub repository</a>
+          </div>
+        </div>
+
+        <!-- Calculator -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Responsive Calculator</div>
+            <div class="item-meta">JavaScript · CSS</div>
+          </div>
+          <p class="item-tech">Tech: HTML5, CSS3, Vanilla JavaScript</p>
+          <ul>
+            <li>
+              Created a mobile‑first calculator with core arithmetic operations and a clean layout that
+              adapts smoothly to small screens.
+            </li>
+            <li>
+              Optimized DOM updates and button feedback, reducing perceived render time during repeated
+              calculations by around 20%.
+            </li>
+          </ul>
+          <div class="links-inline">
+            Live demo: <a href="https://maxyl19.github.io/Portfolio" target="_blank" rel="noreferrer">View on GitHub Pages</a>
+          </div>
+        </div>
+
+        <!-- Responsive Websites -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Responsive Website Collection</div>
+            <div class="item-meta">HTML · CSS · JavaScript</div>
+          </div>
+          <p class="item-tech">Tech: Semantic HTML, CSS3, JavaScript, Flexbox, Grid</p>
+          <ul>
+            <li>
+              Designed and developed multiple marketing and landing pages for small businesses, focusing
+              on clear content hierarchy and mobile responsiveness.
+            </li>
+            <li>
+              Used semantic markup and component‑like structures to keep the codebase easy to update and
+              extend.
+            </li>
+          </ul>
+          <div class="links-inline">
+            Portfolio: <a href="https://maxyl19.github.io/Portfolio" target="_blank" rel="noreferrer">maxyl19.github.io/Portfolio</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="section-subtitle">
+          Best ways to reach out for collaborations, roles, or freelance work.
+        </p>
+        <div class="two-col">
+          <div>
+            <p>
+              For junior front-end roles, internships, or freelance projects, feel free to reach out
+              directly by email or connect on LinkedIn. Short project briefs with timelines and links are
+              especially helpful.
+            </p>
+          </div>
+          <div class="about-meta">
+            <div class="about-item">
+              <div class="about-label">Email</div>
+              <div class="about-value">edwinchigozie2003@gmail.com</div>
+            </div>
+            <div class="about-item">
+              <div class="about-label">Phone</div>
+              <div class="about-value">+234 816 338 7316</div>
+            </div>
+            <div class="about-item">
+              <div class="about-label">GitHub</div>
+              <div class="about-value">
+                <a href="https://github.com/edwinchigoziewebsiter" target="_blank" rel="noreferrer">
+                  github.com/edwinchigoziewebsiter
+                </a>
+              </div>
+            </div>
+            <div class="about-item">
+              <div class="about-label">LinkedIn</div>
+              <div class="about-value">
+                <a href="https://www.linkedin.com/in/edwin-chigozie-a78a14214" target="_blank" rel="noreferrer">
+                  linkedin.com/in/edwin-chigozie-a78a14214
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Edwin Chigozie — Front-End Developer. Built with semantic HTML and modern CSS.
+    </footer>
   </div>
-  
-<div class ="options">
-  
-  <div class="ex">
- <div class="exp">Experience</div>
- <div class="front">front-End Web Developer</div>
- <div class="sfr">2019 - Present | Pro Level Programmer</div>
- <div class="etxt">I am master of HTML, CSS and JavaScript. I know everything needed to make a website functional, efficient and responsive. I will give you %100 web solution. </div>
- 
 
-  <a href= "http://www.linkedin.com/in/edwin-chigozie-a78a14214" class="hire">Hire me</a>
-  
-  <a href="" class="cv">Download my CV</a>
-    </div><!-- all-->
-   </div><!--- Marg-->
-   
-   <script>
-const dev=document.querySelector(".dev");
-var t=2000;
-
-setInterval(()=>{
-dev.innerText=" Designer";
-t+=1000;
-if(t>4000){
-    dev.innerText=" Developer";
-    t=2000;
-}
-}, t)
-   </script>
-    </body>
+  <script>
+    // Update year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
