@@ -25,5 +25,121 @@
             </div>
             <h1>Edwin Chigozie</h1>
             <p style="font-size:1.2rem;margin-bottom:.5rem">
-                <strong>Se
-                    
+                <strong>Senior Front-End Developer</strong> | <em>HackerOne Validated</em>
+            </p>
+            <p style="font-size:1rem;opacity:.95;margin-bottom:1.5rem">Kuje, Abuja FCT, Nigeria</p>
+            <nav class="hb" aria-label="Primary actions">
+                <a href="https://github.com/maxyl19" class="b b-p">GitHub</a>
+                <a href="CV.docx" class="b b-p" download>Download CV</a>
+                <a href="mailto:edwinchigozie2003@gmail.com" class="b" style="background:var(--s)">Email</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ABOVE THE FOLD - NO JS DEPENDENCY -->
+    <section>
+        <div class="c">
+            <h2>Core Expertise</h2>
+            <div class="sg">
+                <div class="s">
+                    <h3>Frontend</h3>
+                    <strong>React • Vue.js • Tailwind • Bootstrap 5</strong>
+                </div>
+                <div class="s">
+                    <h3>Performance</h3>
+                    <strong>30% Speed Gains • Lighthouse 95+ • 100% Jest</strong>
+                </div>
+                <div class="s">
+                    <h3>Security</h3>
+                    <strong>HackerOne • APK Analysis • Smali • Termux</strong>
+                </div>
+                <div class="s">
+                    <h3>Production</h3>
+                    <strong>NCS Customs • Government ICT • 5+ Clients</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="root"><!-- React mounts here --></div>
+
+    <!-- ASYNC LOAD (Non-blocking) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js" async></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" async></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" async></script>
+    
+    <script type="text/babel">
+        const{useState,useCallback}=React;
+        
+        // ULTRA-LIGHTWEIGHT React (ONLY filtering)
+        const ProjectCard=({title,desc,tags,impact,links,image,type})=>(
+            <article className="pc" role="article">
+                <div className="pi-h" aria-hidden="true">{image}</div>
+                <div className="pc-c">
+                    <div style={{display:'flex',gap:'.5rem',marginBottom:'1rem'}}>
+                        {type.map(t=>(<span key={t} style={{
+                            background:'var(--g)',color:'white',padding:'.25rem .75rem',
+                            borderRadius:'20px',fontSize:'.8rem',fontWeight:'600'
+                        }}>{t}</span>))}
+                    </div>
+                    <h3 style={{fontSize:'1.4rem',marginBottom:'.75rem'}}>{title}</h3>
+                    <p style={{color:'#666',lineHeight:1.6,marginBottom:'1rem'}}>{desc}</p>
+                    <div style={{background:'#e8f5e8',padding:'1rem',borderRadius:'8px',marginBottom:'1.5rem'}}>
+                        <strong style={{color:'var(--g)'}}>Impact:</strong> {impact}
+                    </div>
+                    <div style={{display:'flex',gap:'.75rem'}}>
+                        <a href={links.code} className="b b-p" style={{flex:1,padding:'.6rem 1rem'}}>Code</a>
+                        <a href={links.live} className="b" style={{flex:1,padding:'.6rem 1rem',background:'var(--p)'}}>Live</a>
+                    </div>
+                </div>
+            </article>
+        );
+        
+        const App=()=>{
+            const[filter,setFilter]=useState('all');
+            const projects=[
+                {id:1,title:'NCS Customs Clearance Tracker',desc:'Live PAAR dashboard for Nigeria Customs. 5 ports, real-time tracking, duty calculator.',tags:['Bootstrap 5','Dashboard'],impact:'Production • Nigeria Customs Service',type:['ENTERPRISE'],links:{code:'https://github.com/maxyl19/-NCS-Customs-clearance-Tracker-',live:'https://maxyl19.github.io/-NCS-Customs-clearance-Tracker-/'},image:'🇳🇬'},
+                {id:2,title:'HackerOne ColorOS Research',desc:'APK reverse engineering. Hardcoded API endpoints in 45k+ smali files.',tags:['Security','Termux'],impact:'HackerOne Validated',type:['HACKERONE'],links:{code:'https://github.com/maxyl19',live:'#'},image:'🔍'},
+                {id:3,title:'Custom Maitama ICT',desc:'Government ICT solutions. Eliminated 85+ production bugs.',tags:['HTML5/CSS3','Production'],impact:'25% page load reduction',type:['GOVERNMENT'],links:{code:'https://github.com/maxyl19',live:'#'},image:'🏛️'},
+                {id:4,title:'Calculator (Perf Optimized)',desc:'20% render optimization via Lighthouse techniques.',tags:['Performance','Responsive'],impact:'Lighthouse 95+',type:['PERFORMANCE'],links:{code:'https://github.com/maxyl19/Calculator',live:'https://maxyl19.github.io/Calculator/'},image:'⚡'}
+            ];
+            
+            const filtered=projects.filter(p=>filter==='all'||p.type.some(t=>t.toLowerCase().includes(filter)));
+            
+            return(
+                <>
+                    <section>
+                        <div className="c">
+                            <h2>Production Projects</h2>
+                            <nav style={{textAlign:'center',marginBottom:'2.5rem'}}>
+                                {['all','enterprise','hackerone','government','performance'].map(cat=>(
+                                    <button key={cat} className={`b ${filter===cat?'b-p':''}`} style={{
+                                        margin:'0 .5rem',padding:'.7rem 1.5rem',
+                                        background:filter===cat?'var(--g)':'transparent',
+                                        color:filter===cat?'white':'#333',border:'2px solid var(--p)'
+                                    }} onClick={()=>setFilter(cat)} aria-pressed={filter===cat}>
+                                        {cat.toUpperCase()}
+                                    </button>
+                                ))}
+                            </nav>
+                            <div className="p" role="list">
+                                {filtered.map(p=><ProjectCard key={p.id} {...p}/>)}
+                            </div>
+                        </div>
+                    </section>
+                    <footer style={{background:'#f8f9ff',padding:'3rem 0',textAlign:'center'}}>
+                        <div className="c">
+                            <p style={{fontSize:'1.1rem'}}><strong>📧 edwinchigozie2003@gmail.com</strong></p>
+                            <p><strong>💻 github.com/maxyl19</strong> | <strong>📍 Kuje, Abuja</strong></p>
+                        </div>
+                    </footer>
+                </>
+            );
+        };
+        
+        // MOUNT AFTER DOM READY
+        if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>ReactDOM.render(<App/>,document.getElementById('root')));
+        else ReactDOM.render(<App/>,document.getElementById('root'));
+    </script>
+</body>
+</html>
