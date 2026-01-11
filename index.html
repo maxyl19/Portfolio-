@@ -1,229 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- CRITICAL: Preload + DNS hints -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edwin Chigozie - Senior React Developer | HackerOne Validated</title>
-    <meta name="description" content="HackerOne-validated Senior React Developer. NCS Customs Dashboard. 30% perf gains. 100% Jest coverage. Kuje, Abuja.">
+    <title>Edwin Chigozie - Senior React Developer</title>
+    <meta name="description" content="HackerOne Senior React Developer. NCS Customs. 30% perf gains. Kuje Abuja">
     
-    <!-- PWA + PERFORMANCE -->
-    <link rel="manifest" href="data:application/manifest+json,{
-        'name': 'Edwin Chigozie - Senior React Developer',
-        'short_name': 'EdwinDev',
-        'start_url': '/',
-        'display': 'standalone',
-        'theme_color': '#667eea',
-        'background_color': '#ffffff'
-    }">
-    <meta name="theme-color" content="#667eea">
-    
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- PRIORITY 1: Critical CSS inline (no external CSS delay) -->
     <style>
-        :root {--primary: #667eea; --secondary: #764ba2; --success: #28a745;}
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        body {font-family: system-ui, sans-serif; line-height: 1.6; color: #333;}
-        .container {max-width: 1200px; margin: 0 auto; padding: 20px;}
-        
-        header {background: linear-gradient(135deg, var(--primary), var(--secondary)); 
-                color: white; padding: 4rem 0; text-align: center;}
-        .profile-img img {width: 160px; height: 160px; border-radius: 50%; 
-                         object-fit: cover; border: 5px solid white; 
-                         box-shadow: 0 20px 40px rgba(0,0,0,0.3);}
-        h1 {font-size: clamp(2.5rem, 6vw, 4rem); margin: 1rem 0;}
-        .hero {display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;}
-        .btn {padding: 1rem 2rem; border: none; border-radius: 12px; font-weight: 600; 
-               text-decoration: none; color: white; cursor: pointer; 
-               transition: all 0.3s; display: inline-block;}
-        .btn-primary {background: var(--success);}
-        .btn:hover {transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.2);}
-        
-        section {padding: 5rem 0;}
-        h2 {color: var(--primary); font-size: clamp(1.8rem, 4vw, 3rem); 
-            text-align: center; margin-bottom: 3rem;}
-        
-        .skills-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;}
-        .skill {background: linear-gradient(145deg, #f8f9ff, #e8f4fd); padding: 2.5rem; 
-                border-radius: 20px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.1);}
-        
-        .projects {display: grid; gap: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));}
-        .project-card {background: white; border-radius: 24px; overflow: hidden; 
-                       box-shadow: 0 25px 50px rgba(0,0,0,0.15); transition: all 0.4s;}
-        .project-card:hover {transform: translateY(-15px); box-shadow: 0 40px 80px rgba(0,0,0,0.2);}
-        .project-image {height: 240px; background: var(--primary); display: flex; align-items: center; 
-                        justify-content: center; color: white; font-size: 2.5rem; font-weight: 700;}
-        
-        @media (max-width: 768px) {.container {padding: 1rem;} .profile-img img {width: 140px; height: 140px;}}
+        :root{--p:#667eea;--s:#764ba2;--g:#28a745}*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui,sans-serif;line-height:1.6;color:#333}.c{max-width:1200px;margin:0 auto;padding:20px}h1{font-size:clamp(2rem,6vw,3.5rem);margin:1rem 0}.h{background:linear-gradient(135deg,var(--p),var(--s));color:#fff;padding:3rem 0;text-align:center}.pi{text-align:center;margin-bottom:2rem}.pi img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 15px 30px rgba(0,0,0,.3);display:block}.hb{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem}.b{padding:.8rem 1.5rem;border:none;border-radius:8px;font-weight:600;text-decoration:none;color:#fff;cursor:pointer;transition:all .2s;display:inline-block;font-size:.95rem}.b-p{background:var(--g)}.b:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,0,0,.2)}section{padding:4rem 0}h2{color:var(--p);font-size:clamp(1.5rem,4vw,2.5rem);text-align:center;margin-bottom:2.5rem}.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}.s{background:linear-gradient(145deg,#f8f9ff,#e8f4fd);padding:2rem;border-radius:16px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.1);transition:transform .2s}.s:hover{transform:translateY(-5px)}.p{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(350px,1fr))}.pc{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.1);transition:all .3s}.pc:hover{transform:translateY(-10px);box-shadow:0 30px 60px rgba(0,0,0,.15)}.pi-h{height:200px;background:var(--p);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.8rem;font-weight:700}.pc-c{padding:2rem}@media(max-width:768px){.c{padding:1rem}.pi img{width:120px;height:120px}}
     </style>
+    
+    <!-- PRIORITY 2: Async non-critical JS -->
+    <link rel="preload" href="profile.jpg" as="image" imagesrcset="profile.jpg 1x">
+    <link rel="preconnect" href="https://unpkg.com">
 </head>
 <body>
-    <div id="root"></div>
-
-    <script type="text/babel">
-        const { useState, useEffect, useCallback } = React;
-        
-        const ProjectCard = ({ title, description, tech, impact, links, image, type }) => (
-            <article className="project-card" role="article">
-                <div className="project-image" aria-hidden="true">{image}</div>
-                <div style={{padding: '2.5rem'}}>
-                    <div style={{display: 'flex', gap: '0.5rem', marginBottom: '1rem'}}>
-                        {type.map(t => (
-                            <span key={t} style={{
-                                background: 'var(--success)', color: 'white', padding: '0.3rem 1rem',
-                                borderRadius: '20px', fontSize: '0.75rem', fontWeight: '600'
-                            }}>{t}</span>
-                        ))}
-                    </div>
-                    <h3 style={{fontSize: '1.5rem', marginBottom: '1rem'}}>{title}</h3>
-                    <p style={{color: '#666', marginBottom: '1.5rem', lineHeight: 1.7}}>{description}</p>
-                    <div style={{background: '#e8f5e8', padding: '1.5rem', borderRadius: '12px', marginBottom: '1.5rem'}}>
-                        <strong style={{color: var(--success)}}>Impact:</strong> {impact}
-                    </div>
-                    <div style={{display: 'flex', gap: '1rem'}}>
-                        <a href={links.code} className="btn btn-primary" style={{flex: 1}}>Code</a>
-                        <a href={links.live} className="btn" style={{flex: 1, background: var(--primary)}}>Live</a>
-                    </div>
-                </div>
-            </article>
-        );
-        
-        const App = () => {
-            const [filter, setFilter] = useState('all');
-            
-            const projects = [
-                {
-                    id: 1,
-                    title: 'NCS Customs Clearance Tracker',
-                    description: 'Live PAAR dashboard for Nigeria Customs Service. 5 Nigerian ports support, real-time tracking, duty calculator, print-ready reports.',
-                    tech: ['Bootstrap 5', 'Responsive', 'Real-time', 'Dashboard'],
-                    impact: 'Production system for Nigeria Customs Service • 5 ports supported',
-                    type: ['ENTERPRISE', 'PRODUCTION'],
-                    links: { code: 'https://github.com/maxyl19/-NCS-Customs-clearance-Tracker-', live: 'https://maxyl19.github.io/-NCS-Customs-clearance-Tracker-/' },
-                    image: '🇳🇬'
-                },
-                {
-                    id: 2,
-                    title: 'ColorOS Security Research (HackerOne)',
-                    description: 'APK reverse engineering - Discovered hardcoded API endpoints in 45k+ smali files. Termux/apktool analysis.',
-                    tech: ['APK Analysis', 'Termux', 'Smali', 'Security'],
-                    impact: 'HackerOne validated • "PERFECT! Comprehensive evidence"',
-                    type: ['HACKERONE', 'SECURITY'],
-                    links: { code: 'https://github.com/maxyl19', live: '#' },
-                    image: '🔍'
-                },
-                {
-                    id: 3,
-                    title: 'Custom Maitama ICT (Government)',
-                    description: 'Engineered HTML5/CSS3/JS solutions for government ICT department. Eliminated 85+ production bugs.',
-                    tech: ['HTML5/CSS3', 'Cross-browser', 'Production'],
-                    impact: '25% page load reduction • Zero downtime • 15+ tools',
-                    type: ['GOVERNMENT', 'PRODUCTION'],
-                    links: { code: 'https://github.com/maxyl19', live: '#' },
-                    image: '🏛️'
-                },
-                {
-                    id: 4,
-                    title: 'Calculator (20% Render Optimized)',
-                    description: 'Mobile-responsive calculator with 20% render time optimization via Lighthouse 95+ techniques.',
-                    tech: ['Performance', 'Responsive', 'Lighthouse 95+'],
-                    impact: '20% render time reduction • Mobile-first',
-                    type: ['PERFORMANCE'],
-                    links: { code: 'https://github.com/maxyl19/Calculator', live: 'https://maxyl19.github.io/Calculator/' },
-                    image: '⚡'
-                }
-            ];
-            
-            const filteredProjects = projects.filter(p => 
-                filter === 'all' || p.type.some(t => t.toLowerCase().includes(filter))
-            );
-            
-            return (
-                <>
-                    <header role="banner">
-                        <div className="container">
-                            <div style={{textAlign: 'center', marginBottom: '2rem'}}>
-                                <img src="profile.jpg" alt="Edwin Chigozie - Senior React Developer, Kuje Abuja" 
-                                     width="160" height="160" loading="lazy" />
-                            </div>
-                            <h1>Edwin Chigozie</h1>
-                            <p style={{fontSize: '1.3rem'}}>
-                                <strong>Senior Front-End Developer</strong> | <em>HackerOne Validated</em>
-                            </p>
-                            <p style={{fontSize: '1.1rem', opacity: 0.95}}>Kuje, Abuja FCT, Nigeria</p>
-                            <nav aria-label="Primary actions" className="hero" style={{marginTop: '2rem'}}>
-                                <a href="https://github.com/maxyl19" className="btn btn-primary">GitHub</a>
-                                <a href="CV.docx" className="btn btn-primary" download>Download CV</a>
-                                <a href="mailto:edwinchigozie2003@gmail.com" className="btn" style={{background: var(--secondary)}}>Email Me</a>
-                            </nav>
-                        </div>
-                    </header>
+    <!-- PRIORITY 3: HTML-first content (no JS blocking) -->
+    <header class="h">
+        <div class="c">
+            <div class="pi">
+                <img src="profile.jpg" alt="Edwin Chigozie - Senior React Developer, Kuje Abuja" width="140" height="140" loading="lazy">
+            </div>
+            <h1>Edwin Chigozie</h1>
+            <p style="font-size:1.2rem;margin-bottom:.5rem">
+                <strong>Se
                     
-                    <main>
-                        <section id="skills" style={{background: '#f8f9ff'}}>
-                            <div className="container">
-                                <h2>Core Expertise</h2>
-                                <div className="skills-grid">
-                                    <div className="skill">
-                                        <h3>Frontend Mastery</h3>
-                                        <strong>React • Vue.js • Tailwind CSS • Bootstrap 5</strong>
-                                    </div>
-                                    <div className="skill">
-                                        <h3>Performance</h3>
-                                        <strong>30% Speed Gains • Lighthouse 95+ • 100% Jest Coverage</strong>
-                                    </div>
-                                    <div className="skill">
-                                        <h3>Security Research</h3>
-                                        <strong>APK Reverse Engineering • HackerOne • Smali Analysis</strong>
-                                    </div>
-                                    <div className="skill">
-                                        <h3>Production</h3>
-                                        <strong>NCS Customs • Government ICT • 5+ Client Websites</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <section id="projects">
-                            <div className="container">
-                                <h2>Production Projects</h2>
-                                <nav aria-label="Filter projects" style={{textAlign: 'center', marginBottom: '3rem'}}>
-                                    {['all', 'production', 'security', 'performance'].map(cat => (
-                                        <button key={cat} className={`btn ${filter === cat ? 'btn-primary' : ''}`}
-                                            style={{
-                                                margin: '0 0.5rem', padding: '1rem 2rem',
-                                                background: filter === cat ? 'var(--success)' : 'transparent',
-                                                color: filter === cat ? 'white' : '#333',
-                                                border: '2px solid var(--primary)'
-                                            }}
-                                            onClick={() => setFilter(cat)}
-                                            aria-pressed={filter === cat}
-                                        >
-                                            {cat.toUpperCase()}
-                                        </button>
-                                    ))}
-                                </nav>
-                                <div className="projects" role="list">
-                                    {filteredProjects.map(project => <ProjectCard key={project.id} {...project} />)}
-                                </div>
-                            </div>
-                        </section>
-                    </main>
-                    
-                    <footer style={{background: '#f8f9ff', padding: '4rem 0'}}>
-                        <div className="container" style={{textAlign: 'center'}}>
-                            <p style={{fontSize: '1.1rem', marginBottom: '1rem'}}>
-                                <strong>📧 edwinchigozie2003@gmail.com</strong>
-                            </p>
-                            <p><strong>💻 github.com/maxyl19</strong> | <strong>📍 Kuje, Abuja FCT</strong></p>
-                            <p style={{opacity: 0.8, marginTop: '2rem'}}>Open to remote senior frontend roles worldwide</p>
-                        </div>
-                    </footer>
-                </>
-            );
-        };
-        
-        ReactDOM.render(<App />, document.getElementById('root'));
-    </script>
-</body>
-</html>
